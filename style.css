@@ -5,17 +5,17 @@
 }
 
 :root {
-  --bg-base:        #0e1016;
-  --bg-panel:       #13161e;
-  --bg-panel-alt:   #171a24;
+  --bg-base:        #0b0d13;
+  --bg-panel:       #141824;
+  --bg-panel-alt:   #1b2030;
   --bg-node:        #1c2030;
   --bg-node-hover:  #232840;
-  --border:         rgba(255,255,255,0.07);
+  --border:         rgba(255,255,255,0.10);
   --border-active:  rgba(99,132,255,0.45);
 
   --text-primary:   #e8eaf2;
   --text-secondary: #8892aa;
-  --text-muted:     #4d566e;
+  --text-muted:     #6b7590;
 
   --accent:         #4a7cff;
   --accent-dim:     rgba(74,124,255,0.15);
@@ -833,6 +833,13 @@ input[type="range"]#time-slider::-moz-range-thumb {
   padding: 6px 8px;
   cursor: pointer;
   font-size: 13px;
+}
+
+.prob-legend {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
 }
 
 /*====== RESPONSIVE ======*/

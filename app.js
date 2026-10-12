@@ -1248,6 +1248,7 @@ function renderInsightPanel() {
   /////////// Probability bars for top-level branches
   html += '<div class="prob-section">';
   html += '<div class="prob-section-title">Probability by path</div>';
+  html += '<p class="prob-legend">The percentage shows how likely each path is to work out well, so consider the higher one first. The impact tag shows how big a step it is: high means more change and discomfort, low means an easier step.</p>';
   topBranches.forEach((branch) => {
     const prob = branch.probability[tf];
     const impact = branch.impact;
@@ -1257,7 +1258,7 @@ function renderInsightPanel() {
           <span class="prob-row-label">${escapeHtml(branch.label)}</span>
           <div class="prob-row-meta">
             <span class="prob-row-value">${prob}%</span>
-            <span class="impact-pill ${impact}">${impact} impact</span>
+            <span class="impact-pill ${impact}">${impact === "high" ? "High impact: a bigger step" : impact === "low" ? "Low impact: an easier step" : "Medium impact: a moderate step"}</span>
           </div>
         </div>
         <div class="prob-bar-track">
